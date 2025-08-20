@@ -80,7 +80,7 @@ export default function Modal() {
                             className='w-full rounded p-3 text-white shadow bg-gray-600 font-bold uppercase hover:bg-gray-500'
                             onClick={closeModal}
                             >
-                                CERRAR
+                                Cerrar
                             </button>
 
                             <button
