@@ -11,13 +11,14 @@ type Notification = {
 export type NotificationSliceType={
     notification: Notification
     showNotification:(payload: Pick<Notification, 'text' | 'error'>) => void
+    closeNotification: () => void
 }
 
-export const CreateNotificationSlice : StateCreator<NotificationSliceType>= (set, get)=>({
+export const CreateNotificationSlice : StateCreator<NotificationSliceType>= (set)=>({
     notification:{
     text: '',
     error: false,
-    show: true       
+    show: false       
     },
     showNotification:(payload) => {
        set ({
@@ -27,6 +28,14 @@ export const CreateNotificationSlice : StateCreator<NotificationSliceType>= (set
             show: true
         }
        }) 
+    },
+    closeNotification: () => {
+        set((state) => ({
+            notification: {
+                ...state.notification,
+                show: false
+            }
+        }))
     },
 
 })

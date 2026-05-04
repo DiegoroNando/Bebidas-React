@@ -62,6 +62,11 @@ export default function Header() {
                     className= {({isActive})=>
                       isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold'
                     }>Favoritos</NavLink>
+                    <NavLink 
+                    to="/ia"
+                    className= {({isActive})=>
+                      isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold'
+                    }>IA</NavLink>
                 </nav>
             </div>
             {isHome &&(

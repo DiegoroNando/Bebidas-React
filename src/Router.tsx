@@ -1,6 +1,7 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import IndexPage from './views/IndexPage';
 import Favorites from './views/Favorites';
+import AssistantIA from './views/AssistantIA';
 import Layout from './layout/Layout';
 
 export default function AppRouter() {
@@ -10,6 +11,7 @@ export default function AppRouter() {
         <Route element={<Layout/>}>
             <Route path='/' element={<IndexPage />} index />
             <Route path='/favoritos' element={<Favorites />} />
+            <Route path='/ia' element={<AssistantIA />} />
         </Route>
       </Routes>
     </BrowserRouter>
